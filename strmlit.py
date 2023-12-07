@@ -41,7 +41,7 @@ def Image_Match():
 
     # Use the directory_path in the glob function
     image_paths = glob.glob(f'{directory_path}/*.jpg')
-    st.title("Assignment 4 ")
+    st.title("Assignment 5 ")
 
     # Rest of the code remains the same
    # st.write(f'Found [{len(image_paths)}] images')
