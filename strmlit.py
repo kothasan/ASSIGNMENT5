@@ -41,7 +41,7 @@ def Image_Match():
 
     # Use the directory_path in the glob function
     image_paths = glob.glob(f'{directory_path}/*.jpg')
-    st.title("Assignment 5")
+    st.title("Assignment 5 ")
 
     # Rest of the code remains the same
    # st.write(f'Found [{len(image_paths)}] images')
@@ -190,7 +190,7 @@ def Image_Match():
 
     # Streamlit UI
 
-    st.write("Upload your image file:")
+    st.write("Upload your image:")
     user_image = st.file_uploader("Your image", type=["jpg", "jpeg", "png"])
     if user_image:
         search_similar_images(user_image, image_style_embeddings, images)
@@ -277,10 +277,10 @@ def Image_Search_by_Text():
   
 
     # Streamlit app
-    st.title("Images which match the description of the text string.")
+    st.title("Query Exploration App")
 
     # User input for query
-    user_query = st.text_input("Enter your string:")
+    user_query = st.text_input("Enter your query:")
 
     # Function to generate explanation and answer using GPT-3
     # def generate_explanation_and_answer(query):
@@ -330,7 +330,7 @@ def Image_Search_by_Text():
 
 
 # Run the selected app based on the user's choice
-if option == "Given an image, finding other similar images":
+if option == "Image Match":
     Image_Match()
-elif option == "Given a text string, find images which match the description of the text string.":
+elif option == "Image Search by Text":
     Image_Search_by_Text()
